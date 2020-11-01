@@ -19,7 +19,7 @@
           {{ todo.done }}
         </td>
         <td>
-          {{ todo.created_at }}
+          {{ format(todo.created_at) }}
         </td>
       </tr>
 
@@ -43,6 +43,15 @@ export default {
           created_at: new Date()
         },
       ]
+    }
+  },
+  methods: {
+    format(date) {
+      return date.getFullYear()
+        + '/' + (date.getMonth() + 1)
+        + '/' + date.getDate()
+        + ' ' + date.getHours()
+        + ':' + date.getMinutes();
     }
   }
 
