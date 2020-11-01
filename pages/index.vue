@@ -22,6 +22,17 @@
           {{ format(todo.created_at) }}
         </td>
       </tr>
+      <tr>
+        <td>新規</td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <button>
+            追加
+          </button>
+        </td>
+      </tr>
 
     </table>
   </div>
