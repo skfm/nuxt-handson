@@ -16,7 +16,7 @@
           {{ todo.title }}
         </td>
         <td>
-          {{ todo.done }}
+          <input type="checkbox" :checked="todo.done"/>
         </td>
         <td>
           {{ format(todo.created_at) }}
@@ -34,7 +34,7 @@ export default {
       todos: [
         {
           title: '買い物',
-          done: false,
+          done: true,
           created_at: new Date()
         },
         {
