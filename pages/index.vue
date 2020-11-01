@@ -17,7 +17,7 @@
           {{ todo.title }}
         </td>
         <td>
-          <input type="checkbox" :checked="todo.done"/>
+          <input type="checkbox" :checked="todo.done" @change="toggle(i)"/>{{todo.done}}
         </td>
         <td>
           {{ format(todo.created_at) }}
@@ -80,6 +80,9 @@ export default {
     },
     remove(i) {
       this.todos.splice(i, 1);
+    },
+    toggle(i) {
+      this.$set(this.todos[i], 'done', !this.todos[i].done);
     }
   },
 }
